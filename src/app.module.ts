@@ -9,6 +9,7 @@ import { configurationCore } from './configuration/configuration-core';
 import { configurationWebSockets } from './configuration/configuration-webSockets';
 import { WebsocketsModule } from './core/websockets/websockets.module';
 import { configurationCors } from './configuration/configuration-cors';
+import { SharedModule } from './core/shared/shared.module';
 
 require("dotenv").config();
 
@@ -35,6 +36,7 @@ require("dotenv").config();
       },
       inject: [ConfigService],
     }),
+    SharedModule,
     CoreModule.registerAsync({
       imports: [],
       useFactory: () => {
