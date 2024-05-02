@@ -10,6 +10,11 @@ export const VALIDATION_ERRORS_CONSTANTS = {
             MIN_LENGTH: 'Name minimum length is 4 characteres',
             MAX_LENGTH: 'Name maximum length is 15 characteres',
         },
+        EMAIL: {
+            NOT_EMPTY: 'Email should be not empty',
+            INVALID_VALUE: 'Email should be string value',
+            MATCHES: 'Email should be valid',
+        },
     }, */
 };
     
