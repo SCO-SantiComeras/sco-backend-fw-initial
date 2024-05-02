@@ -7,7 +7,7 @@ import { AppInterceptor } from './app.interceptor';
 import { configurationApp } from './configuration/configuration-app';
 import { configurationCore } from './configuration/configuration-core';
 import { configurationWebSockets } from './configuration/configuration-webSockets';
-import { WebsocketsModule } from './modules/websockets/websockets.module';
+import { WebsocketsModule } from './core/websockets/websockets.module';
 import { configurationCors } from './configuration/configuration-cors';
 
 require("dotenv").config();

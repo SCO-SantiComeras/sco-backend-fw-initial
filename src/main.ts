@@ -2,7 +2,7 @@ import { NestFactory } from '@nestjs/core';
 import { ConfigService } from '@nestjs/config';
 import { LoggerService } from 'sco-backend-fw';
 import { AppModule } from './app.module';
-import { WebsocketsAdapter } from './modules/websockets/adapter/websockets-adapter';
+import { WebsocketsAdapter } from './core/websockets/adapter/websockets-adapter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, 
