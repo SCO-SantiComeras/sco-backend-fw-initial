@@ -12,7 +12,7 @@ import { CoreModule } from 'sco-backend-fw';
         return {
           verbose: true,
           path: './src',
-          folder: 'functions',
+          folder: 'controller',
           extension: 'ts',
           response: false,
           validationPipe: true,
