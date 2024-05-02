@@ -18,7 +18,7 @@ export class MongoDbService {
       enabled: this.configService.get('mongo.enabled') || false,
       ip: this.configService.get('mongo.ip') || 'localhost',
       port: this.configService.get('mongo.port') || 27017,
-      database: this.configService.get('mongo.database') || 'sco-global-controller',
+      database: this.configService.get('mongo.database') || 'sco-backend-fw-initial',
       user: this.configService.get('mongo.user') || '',
       pass: this.configService.get('mongo.pass') || '',
     };
