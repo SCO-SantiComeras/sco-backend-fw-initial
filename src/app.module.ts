@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { CoreModule } from 'sco-backend-fw';
+import { ScoBackendModule } from 'sco-backend-fw';
 import { AppService } from './app.service';
 import { AppInterceptor } from './app.interceptor';
 import { configurationApp } from './configuration/configuration-app';
-import { configurationCore } from './configuration/configuration-core';
+import { configurationScoBackend } from './configuration/configuration-sco-backend';
 import { configurationWebSockets } from './configuration/configuration-webSockets';
 import { WebsocketsModule } from './core/websockets/websockets.module';
 import { configurationCors } from './configuration/configuration-cors';
@@ -20,7 +20,7 @@ require("dotenv").config();
     ConfigModule.forRoot({
       load: [
         configurationApp,
-        configurationCore,
+        configurationScoBackend,
         configurationWebSockets,
         configurationCors,
         configurationMongo,
@@ -41,7 +41,7 @@ require("dotenv").config();
     }),
     MongoDbModule.register(),
     SharedModule,
-    CoreModule.registerAsync({
+    ScoBackendModule.registerAsync({
       imports: [],
       useFactory: () => {
         return {
