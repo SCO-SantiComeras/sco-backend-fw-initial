@@ -33,7 +33,7 @@
     "mongoose": "^8.3.3",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.1",
-    "sco-backend-fw": "^10.1.2",
+    "sco-backend-fw": "^10.1.3",
     "socket.io": "^4.7.5"
   },
   "devDependencies": {
