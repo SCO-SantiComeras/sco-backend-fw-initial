@@ -10,6 +10,8 @@ import { configurationWebSockets } from './configuration/configuration-webSocket
 import { WebsocketsModule } from './core/websockets/websockets.module';
 import { configurationCors } from './configuration/configuration-cors';
 import { SharedModule } from './core/shared/shared.module';
+import { configurationMongo } from './configuration/configuration-mongo';
+import { MongoDbModule } from './core/mongo-db/mongo-db.module';
 
 require("dotenv").config();
 
@@ -21,6 +23,7 @@ require("dotenv").config();
         configurationCore,
         configurationWebSockets,
         configurationCors,
+        configurationMongo,
       ],
       envFilePath: `./env/${process.env.NODE_ENV}.env`,
       isGlobal: true,
@@ -36,6 +39,7 @@ require("dotenv").config();
       },
       inject: [ConfigService],
     }),
+    MongoDbModule.register(),
     SharedModule,
     CoreModule.registerAsync({
       imports: [],
