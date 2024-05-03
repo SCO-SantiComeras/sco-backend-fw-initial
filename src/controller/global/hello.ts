@@ -26,7 +26,7 @@ async (body: {
         code: appService.httpErrorsService.HTTP_STATUS.CONFLICT
     } as HttpError;
 
-    // Decostuction providers example
+    // Destructuring providers example
     const { httpErrorsService } = appService;
     return {
         type: httpErrorsService.HTTP_ERRORS_TYPES.HTTP_EXCEPTION, 
