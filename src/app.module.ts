@@ -56,6 +56,8 @@ require("dotenv").config();
       },
       inject: [ConfigService],
     }),
+
+    /* Own Modules Imports */
   ],
   providers: [
     AppService,
