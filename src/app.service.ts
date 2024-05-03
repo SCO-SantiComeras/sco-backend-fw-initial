@@ -1,23 +1,22 @@
 import { Injectable } from "@nestjs/common";
-import { ICore, IFileFunction, TYPES } from "sco-backend-fw";
+import { FileFunctionsService, ICore, IFileFunction, TYPES } from "sco-backend-fw";
+import { GLOBAL_ROUTES } from "./controller-routes/global.routes";
 
 @Injectable()
 export class AppService implements ICore {
 
     /* Add Own Dependencies */
     constructor(
-        // Example: private readonly websocketsService: WebsocketsService,
-    ) {}
+        private readonly fileFunctionsService: FileFunctionsService,
+    ) {
+        this.fileFunctionsService.setFileFunctions(this.getFileFunctionsConstants());
+    }
 
     /*  Function Files Constants*/
-    getFuntionFilesConstants(): IFileFunction[] {
+    getFileFunctionsConstants(): IFileFunction[] {
         return [
             /* Global */
-            {
-                file: 'hello',
-                path: 'global',
-                resultType: 'string',
-            },
+            ...GLOBAL_ROUTES,
         ];
     }
 
