@@ -35,6 +35,6 @@ async (body: {
     } as HttpError;
 } */
 
-async () => {
+() => {
     return 'Hello World!';
 }
