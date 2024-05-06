@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ScoBackendFwModule } from 'sco-backend-fw';
+import { CoreService } from './core/core.service';
 import { AppService } from './app.service';
 import { AppInterceptor } from './app.interceptor';
 import { configurationApp } from './configuration/configuration-app';
@@ -61,6 +62,7 @@ require("dotenv").config();
     /* Own Modules Imports */
   ],
   providers: [
+    CoreService,
     AppService,
     {
       provide: APP_INTERCEPTOR,
