@@ -27,7 +27,7 @@ export class CoreService implements ICore {
   }
 
   /* Types */
-  setCustomResultTypes(): any {
+  setCustomTypes(): any {
     return {
       ...TYPES, // Default Types, you are not required to set default types
     }
