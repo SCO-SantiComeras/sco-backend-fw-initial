@@ -52,6 +52,7 @@ require("dotenv").config();
           response: configService.get('sco.response'),
           validationPipe: configService.get('sco.validationPipe'),
           validationPassport: configService.get('sco.validationPassport'),
+          strictResult: configService.get('sco.strictResult'),
         };
       },
       inject: [ConfigService],
