@@ -9,11 +9,11 @@ export class AppService implements ICore {
     constructor(
         private readonly fileFunctionsService: FileFunctionsService,
     ) {
-        this.fileFunctionsService.setFileFunctions(this.getFileFunctionsConstants());
+        this.fileFunctionsService.setFileFunctions(this.createControllerRoutes());
     }
 
     /*  Function Files Constants*/
-    getFileFunctionsConstants(): IFileFunction[] {
+    createControllerRoutes(): IFileFunction[] {
         return [
             /* Global */
             ...GLOBAL_ROUTES,
@@ -30,9 +30,9 @@ export class AppService implements ICore {
     }
 
     /* Types */
-    getTypesConstants(): any {
+    setCustomResultTypes(): any {
         return {
-            ...TYPES,
+            ...TYPES, // Default Types, you are not required to set default types
         }
     }
 }
